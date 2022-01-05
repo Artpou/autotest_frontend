@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import { Routes, Route, Link } from "react-router-dom";
 
 import LoginPage from './components/LoginPage/LoginPage';
@@ -12,7 +11,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <nav className="App-nav">
+          <Link to="/">Home</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
